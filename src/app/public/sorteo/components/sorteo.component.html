@@ -1,0 +1,32 @@
+<mat-chip-list aria-label="Color selection">
+    <mat-chip *ngFor="let bolas of primerSorteoBolas" selected [color]='bolas.color'>
+        {{bolas.numero}}
+    </mat-chip>
+</mat-chip-list>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ng-container *ngFor="let item of primerSorteoBolas">
+
+    <p> BOLA {{item.numero}} </p>
+
+    <mat-chip-list *ngIf="item.bolas.length != 0" aria-label="Color selection">
+        <mat-chip *ngFor="let bolas of item.bolas" selected>
+            {{bolas}}
+        </mat-chip>
+    </mat-chip-list>
+
+</ng-container>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<button (click)="sortear()">SORTEAR</button>
