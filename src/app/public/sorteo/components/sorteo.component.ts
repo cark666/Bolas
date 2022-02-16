@@ -16,6 +16,7 @@ export class SorteoComponent implements OnInit {
 
 
 primerSorteoBolas: Bola[] = [];
+mostrar: boolean = false;
 
 constructor( ){}
 ngOnInit() {
@@ -26,6 +27,7 @@ ngOnInit() {
 
 
 sortear( ){
+  this.mostrar = true;
 this.primerSorteoBolas = []
 var Numerobolas = aleatorios(3,4)
 
